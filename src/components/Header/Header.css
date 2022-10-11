@@ -1,0 +1,19 @@
+.active {
+    text-decoration: underline;
+    color: white;
+}
+
+.brand-name {
+    color: white;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    color: white;
+}

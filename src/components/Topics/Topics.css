@@ -1,0 +1,19 @@
+.topics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .topics {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .topics {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
