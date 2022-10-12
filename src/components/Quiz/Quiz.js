@@ -9,12 +9,10 @@ const Quiz = ({ quiz }) => {
     const { id, question, options, correctAnswer } = quiz;
     const splitted = question.split("<p>");
     const query = splitted[1].split("</p>");
-    const quizNumber = id.slice(-2) + 1;
+    const quizNumber = +id.slice(-2) + 1;
     return (
         <Container className="quiz">
-            <p className="query">
-                Quiz:{quizNumber} {query}
-            </p>
+            <p className="query">Quiz: {query}</p>
 
             <div className="option">
                 {options.map((option, idx) => (

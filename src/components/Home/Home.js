@@ -1,13 +1,14 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import Banner from "../Banner/Banner";
 import Topics from "../Topics/Topics";
 
 const Home = () => {
     return (
-        <div>
+        <Container>
             <Banner></Banner>
             <Topics></Topics>
-        </div>
+        </Container>
     );
 };
 
