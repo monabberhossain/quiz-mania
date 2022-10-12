@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const Statistics = () => {
     return (
-        <div>
+        <Container className="statistics">
             <h3>Statistics</h3>
-        </div>
+        </Container>
     );
 };
 
