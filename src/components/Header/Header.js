@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div>
             <Navbar expand="md lg" bg="dark" variant="dark">
-                <Container>
+                <Container className="nav-container">
                     <Navbar.Brand>
                         <Link style={{ textDecoration: "none" }} to="/">
                             <h2 className="brand-name">Quiz Mania</h2>
@@ -15,7 +15,7 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav style={{ height: "auto" }} navbarScroll>
+                        <Nav className="nav-list" style={{ height: "auto" }} navbarScroll>
                             <Link
                                 className={({ isActive }) =>
                                     isActive ? "active" : undefined
