@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "./Topic.css";
 
-const Topic = ({ topic, startQuiz }) => {
+const Topic = ({ topic }) => {
     const { id, name, logo, total } = topic;
     return (
         <Container className="topic">

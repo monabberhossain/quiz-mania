@@ -15,13 +15,11 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
-                        <Nav className="nav-list" style={{ height: "auto" }} navbarScroll>
-                            <Link
-                                className={({ isActive }) =>
-                                    isActive ? "active" : undefined
-                                }
-                                to="/"
-                            ></Link>
+                        <Nav
+                            className="nav-list"
+                            style={{ height: "auto" }}
+                            navbarScroll
+                        >
                             <Link className="nav-item" to="/home">
                                 Home
                             </Link>

@@ -3,7 +3,6 @@ import "./Option.css";
 
 const Question = ({ option, id }) => {
     const [checked, setChecked] = useState(false);
-    console.log(id);
     return (
         <div className="option-item">
             <div
@@ -20,7 +19,10 @@ const Question = ({ option, id }) => {
                     checked={checked}
                     onChange={(e) => setChecked(e.currentTarget.checked)}
                 />
-                <label className="option-btn btn btn-outline-primary" htmlFor={id}>
+                <label
+                    className="option-btn btn btn-outline-primary"
+                    htmlFor={id}
+                >
                     {option}
                 </label>
             </div>

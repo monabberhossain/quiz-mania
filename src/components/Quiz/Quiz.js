@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Option from "../Option/Option";
+import { EyeIcon } from "@heroicons/react/24/solid";
 import "./Quiz.css";
+import { Link } from "react-router-dom";
 
 const Quiz = ({ quiz }) => {
     const { id, question, options, correctAnswer } = quiz;
     const splitted = question.split("<p>");
     const query = splitted[1].split("</p>");
-    const quizNumber = +id.slice(-1) + 1;
+    const quizNumber = id.slice(-2) + 1;
     return (
         <Container className="quiz">
             <p className="query">
@@ -23,7 +25,12 @@ const Quiz = ({ quiz }) => {
                     ></Option>
                 ))}
             </div>
-            <div className="correct-answer">{correctAnswer}</div>
+            <div className="correct-answer">
+                <Link className="eye-icon">
+                    <EyeIcon />
+                </Link>
+                <p>{correctAnswer}</p>
+            </div>
         </Container>
     );
 };
