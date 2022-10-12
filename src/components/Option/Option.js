@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Option.css";
 
-const Question = ({ option, id }) => {
+const Question = ({ option, id, correctAnswer }) => {
     const [checked, setChecked] = useState(false);
     return (
         <div className="option-item">
@@ -15,9 +15,13 @@ const Question = ({ option, id }) => {
                     className="btn-check"
                     name="btnradio"
                     id={id}
+                    value={correctAnswer}
                     autoComplete="off"
                     checked={checked}
-                    onChange={(e) => setChecked(e.currentTarget.checked)}
+                    onChange={(e) => {
+                        setChecked(e.currentTarget.checked)}
+                        
+                    }
                 />
                 <label
                     className="option-btn btn btn-outline-primary"

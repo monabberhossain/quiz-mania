@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Option from "../Option/Option";
+import { toast } from "react-toastify";
 import { EyeIcon } from "@heroicons/react/24/solid";
 import "./Quiz.css";
 import { Link } from "react-router-dom";
@@ -19,15 +20,19 @@ const Quiz = ({ quiz }) => {
                     <Option
                         key={idx}
                         id={`radio-${quizNumber}${idx}`}
+                        correctAnswer={correctAnswer}
                         option={option}
                     ></Option>
                 ))}
             </div>
             <div className="correct-answer">
                 <Link className="eye-icon">
-                    <EyeIcon />
+                    <EyeIcon
+                        onClick={() => {
+                            toast.success("a");
+                        }}
+                    />
                 </Link>
-                <p>{correctAnswer}</p>
             </div>
         </Container>
     );
